@@ -1,8 +1,81 @@
 \chapter{symmergent重力理論}
 
-\section{修正重力理論}
 \cite{DeFelice:2010aj,Sotiriou:2008rp,Charmousis:2008kc,Bamba:2015uma,Nojiri:2017ncd}
-\section{symmergent重力}
+\section{symmergent重力の誕生}
 \cite{Cimdiker:2021cpz,Pantig:2022qak,Pulice:2023dqw,Demir:2021moq,Bostan:2023hjp,Rayimbaev:2022hca,Demir:2019imw,Ali:2023dku,Sakharov:1967nyk,Cimdiker:2020enx}
-標準模型(SM:Standard Model)は，我々を構成する最小単位の素粒子と，それらの粒子間の相互作用を記述する理論である．このモデルは大型ハドロン衝突型加速器(LHC:Large Hadron Collider)におけるヒッグス粒子の発見で完成した．しかし，暗黒物質，重力，ニュートリノ質量などの未解決の問題の観点からSMは拡張が必要である可能性を示している．また，SMは新物理の兆候が実験で全く見つからないことから，重力スケールであるプランクスケールまで有効ではないかという考えが生まれている．しかし，SMは平坦時空における有効場の量子論であり，紫外(UV)スケールに対して高い感度を示す．特に，ゲージボソン質量はUVカットオフスケールのべき乗項の補正により，ゲージ対称性を明示的に破ってしまう．このゲージ対称性を回復させるために，symmergent重力と呼ばれる新しいアプローチが提案された．
-\[\delta S= \int d^4x\,\sqrt{-\eta}\left(-V_0-c_O \Lambda^4-\sum_i c_{m_i} m_i^2 \Lambda^2-c_\phi \Lambda^2 \phi^\dagger \phi+c_V \Lambda^2 V_\mu V^\mu\right).\]
+標準模型(SM:Standard Model)は，我々を構成する最小単位の素粒子と，それらの粒子間の相互作用を記述する理論である．このモデルは大型ハドロン衝突型加速器(LHC:Large Hadron Collider)におけるヒッグス粒子の発見で完成した．しかし，暗黒物質，重力，ニュートリノ質量などの未解決の問題の観点からSMは拡張が必要である可能性を示している．また，SMは新物理の兆候が実験で全く見つからないことから，重力スケールであるプランクスケールまで有効ではないかという考えが生まれている．しかし，SMは平坦時空における有効場の量子論であり，紫外(UV)スケールに対して高い感度を示す．特に，ゲージボソン質量はUVカットオフスケールのべき乗項の補正により，ゲージ対称性を明示的に破ってしまう．このゲージ対称性を回復させるために，symmergent重力と呼ばれる新しいアプローチが提案された．これは，重力の出現を通して場の量子論のUVカットオフを除去するものである．
+
+\section{ゲージ対称性を回復する方法}
+symmergent重力においてゲージ対称性が回復するメカニズムを記す．
+出発点は，平坦な時空におけるUVカットオフ$\Lambda$を考慮した場の量子論の作用である．
+\begin{dmath}
+    \delta S= \int d^4x\,\sqrt{-\eta}\left(-V_0-c_O \Lambda^4-\sum_i c_{m_i} m_i^2 \Lambda^2-c_\phi \Lambda^2 \phi^\dagger \phi+c_V \Lambda^2 V_\mu V^\mu\right)
+    \zlabel{eq:action}
+\end{dmath}
+ここで，$\eta = \mathrm{diag}(1,-1,-1,-1)$は平坦時空の計量，$V_0$は真空エネルギー，$c_O$は4次の真空エネルギー補正を表すループ因子，$c_V$はループによって誘導されるゲージボソン質量のループ因子，$c_m$は2次の真空エネルギー補正に対応するループ因子である．この作用はゲージ対称性を破っている．そこから説明していく．\\
+スカラー場$\phi$とゲージ場$V_\mu$を含む場の量子論の作用は
+\begin{dmath}
+    S= \int d^4x\left(\frac{1}{2}\partial_\mu \phi \partial^\mu \phi -\frac{1}{2} V_{\mu\nu} V^{\mu\nu} -V_0\right)
+\end{dmath}
+のように与えられる．これを1ループまでの量子補正を加えた有効作用$\Gamma\left[\phi_c \right]$にする．
+\begin{dmath}
+    \Gamma \left[\phi_c \right]=S \left[\phi_c \right]+\frac{i}{2} \mathrm{Tr}\, \mathrm{ln} \left[-\partial_\mu \partial^\mu -m^2 -\frac{\lambda}{2}\phi^2_c \right]
+\end{dmath}
+次に，運動量表示$k$にし，UVカットオフ$\Lambda$を用いて$\left|k\right|<\Lambda$という制限をする．
+\begin{dmath}
+    \Gamma \ab[\phi_c]=S \ab[\phi_c]+\frac{i}{2} \int ^{\ab|k|<\Lambda} \frac{d^4k}{2\pi}^4 \mathrm{ln} \ab[-k^2 -m^2]
+\end{dmath}
+積分を行うと，\zcref{eq:action}となり，特に，$c_V \Lambda^2 V_\mu V^\mu$は通常のゲージボソンの質量項$\mathcal{L}=\frac{1}{2}m^2 V_\mu V^\mu$と対応関係がある．しかし，これが異常なゲージボソン質量となり，ゲージ対称性の破れにつながる．\\
+これからゲージ対称性が回復されるメカニズムを記す．
+まず，\zcref{eq:action}の有効場の量子論を計量$g_{\mu\nu}$をもつ曲がった時空へ移す．
+ \[\eta_{\mu\nu} \rightarrow g_{\mu\nu},\quad \partial_\mu \rightarrow \nabla_\mu\]
+ 次に，ゲージボソン質量項に対して以下の写像を行う．
+ \begin{dmath}
+    c_V \Lambda^2 V_\mu V^\mu \to c_V V_\mu \ab(\Lambda^2 g^{\mu\nu}-R^{\mu\nu}\ab(g))V_\nu
+ \end{dmath}
+この写像を行う際には，曲がった時空の計量におけるリッチ曲率は，共変微分を介してゲージセクターのみに現れるという考えを用いる．最後に，ベクトルボソン質量をヒッグス場へ置き換えると同様に，UVカットオフをアフィン曲率へ置き換える．
+\[\Lambda^2 g^{\mu\nu} \to \mathbb{R}^{\mu\nu}\ab(\Gamma)\]
+アフィン曲率$\mathbb{R}$はアフィン接続$\Gamma$から定義した曲率であり，リッチ曲率$R$とは計量$g_{\mu\nu}$から定義される点で異なる．
+\begin{dmath}
+\mathbb{R}_{\mu\nu}\ab(\Gamma)=\partial_\lambda \Gamma^\lambda_{\mu\nu}-\partial_\nu \Gamma^\lambda_{\mu\lambda}+\Gamma^\rho_{\lambda\rho}\Gamma^\lambda_{\mu\nu}-\Gamma^\lambda_{\rho\nu}\Gamma^\rho_{\mu\lambda}
+\zlabel{eq:アフィン曲率}
+\end{dmath}
+アフィン曲率への置き換えをすると，\zcref{eq:action}は以下のようになる．
+\begin{dmath}
+\begin{aligned}
+S={}&\int d^4x\,\sqrt{-g}\Bigg[-V_0-\frac{1}{16\pi G}\mathbb{R}(g,\Gamma)-\frac{c_O}{16}\mathbb{R}^2(g,\Gamma)-\frac{c_\phi}{4}\phi^\dagger\phi\,\mathbb{R}(g,\Gamma)\\&\qquad+c_V\mathrm{tr}\Big[V^\mu\big(\mathbb{R}_{\mu\nu}(\Gamma)-R_{\mu\nu}({}^g\Gamma)\big)V^\nu\Big]\Bigg]
+\end{aligned}
+\end{dmath}
+この作用におけるアフィン接続は，その運動方程式$\delta S=0$を解くことで，消去することができる．
+\begin{dmath}
+    ^\Gamma\nabla_\lambda Q_{\mu\nu}=0
+    \zlabel{eq:EOM}
+\end{dmath}
+ここで，$Q_{\mu\nu}$はdisformal計量を表し，
+\begin{dmath}
+    Q_{\mu\nu}=\ab(\frac{1}{16\pi G}+\frac{c_\phi}{4}\phi^2-\frac{c_O}{8}g^{\alpha\beta}\mathbb{R}_{\alpha\beta}\ab(\Gamma))g_{\mu\nu}+c_V\mathrm{tr}\ab[V_\mu V_\nu]
+\end{dmath}
+と与えられる．\zcref{eq:EOM}の一般解は
+\begin{dmath}
+    \Gamma^\lambda_{\mu\nu}=\frac{1}{2}\ab(Q^{-1})^{\lambda\rho}\ab(\partial_\mu Q_{\nu\rho}+\partial_\nu Q_{\rho\mu}-\partial_\rho Q_{\mu\nu})
+    =\,^g\Gamma^\lambda_{\mu\nu}+\frac{1}{2}\ab(Q^{-1})^{\lambda\rho}\ab(\nabla_\mu Q_{\nu\rho}+\nabla_\nu Q_{\rho\mu}-\nabla_\rho Q_{\mu\nu})
+\end{dmath}
+1/Gが非常に大きいことにより，次のように展開できる．
+\begin{dmath}
+    \Gamma^\lambda_{\mu\nu}=\,^g\Gamma^\lambda_{\mu\nu}+8\pi G\ab(\nabla_\mu Q^\lambda_\nu+\nabla_\nu Q^\lambda_\mu-\nabla^\lambda Q_{\mu\nu})
+\end{dmath}
+これを\zcref{eq:アフィン曲率}に代入すると
+\begin{dmath}
+    \mathbb{R}_{\mu\nu}\ab(\Gamma)=R_{\mu\nu}\ab(^g\Gamma)+\mathcal{O}\ab(G)
+\end{dmath}
+これにより，ゲージボソン質量項は抑制される．
+\begin{dmath}
+    c_V\mathrm{tr}\ab[V^\mu\ab(0+\mathcal{O}\ab(G)) V^\nu]
+\end{dmath}
+$\mathcal{O}\ab(G)$にはスカラー場やゲージボソンに対する質量項は含まれていないため，完全に作用から質量項が失われ，ゲージ対称性は回復する．このプロセスを経て，最終的に得られる作用は
+\begin{dmath}
+    S=\int d^4x\sqrt{-g}\ab(\frac{R}{16\pi G}+\frac{c_\phi}{4}\phi^2R-\frac{c_O}{16}R^2)
+\end{dmath}
+これがsymmergent重力における作用である．
+
+\section{$f(R)$重力としてのsymmergent重力}
