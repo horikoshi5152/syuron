@@ -43,17 +43,27 @@ symmergent重力においてゲージ対称性が回復するメカニズムを�
 アフィン曲率への置き換えをすると，\zcref{eq:action}は以下のようになる．
 \begin{dmath}
 \begin{aligned}
-S={}&\int d^4x\,\sqrt{-g}\Bigg[-V_0-\frac{1}{16\pi G}\mathbb{R}(g,\Gamma)-\frac{c_O}{16}\mathbb{R}^2(g,\Gamma)-\frac{c_\phi}{4}\phi^\dagger\phi\,\mathbb{R}(g,\Gamma)\\&\qquad+c_V\mathrm{tr}\Big[V^\mu\big(\mathbb{R}_{\mu\nu}(\Gamma)-R_{\mu\nu}({}^g\Gamma)\big)V^\nu\Big]\Bigg]
+S={}&\int d^4x\,\sqrt{-g}\Bigg[-V_0-\sum_i\frac{c_{m_i}}{4}m^2_i\mathbb{R}^2(g,\Gamma)-\frac{c_O}{16}\mathbb{R}^2(g,\Gamma)\\&\qquad -\frac{c_\phi}{4}\phi^\dagger\phi\,\mathbb{R}(g,\Gamma)+c_V\mathrm{tr}\Big[V^\mu\big(\mathbb{R}_{\mu\nu}(\Gamma)-R_{\mu\nu}({}^g\Gamma)\big)V^\nu\Big]\Bigg]
+\zlabel{eq:action2}
 \end{aligned}
 \end{dmath}
-この作用におけるアフィン接続は，その運動方程式$\delta S=0$を解くことで，消去することができる．
+この作用の第2項から重力定数$G$は次のように得られる．
+\begin{dmath}
+    G^{-1}=4\pi\sum_ic_{m_i}m^2_i\xrightarrow{\mathrm{one\,loop}}\frac{1}{8\pi}\mathrm{str}\ab[\mathcal{M^}^2]
+\end{dmath}
+ここで$\mathcal{M}^2$は，すべての場の質量二乗行列を表す．1ループにおいて，$\mathrm{str}\ab[\cdots]$はスーパートレースを表し，
+\begin{dmath}
+    \mathrm{str}\ab[\mathcal{M}^2]=\sum_i\ab(-1)^{2s_i}\ab(2s_i+1)\mathrm{tr}\ab[\mathcal{M}^2]
+\end{dmath}
+と与えられる．$s_i$はスピンを表す．\\
+\zcref{eq:action2}に関してだが，この作用におけるアフィン接続は，その運動方程式$\delta S=0$を解くことで消去することができる．
 \begin{dmath}
     ^\Gamma\nabla_\lambda Q_{\mu\nu}=0
     \zlabel{eq:EOM}
 \end{dmath}
 ここで，$Q_{\mu\nu}$はdisformal計量を表し，
 \begin{dmath}
-    Q_{\mu\nu}=\ab(\frac{1}{16\pi G}+\frac{c_\phi}{4}\phi^2-\frac{c_O}{8}g^{\alpha\beta}\mathbb{R}_{\alpha\beta}\ab(\Gamma))g_{\mu\nu}+c_V\mathrm{tr}\ab[V_\mu V_\nu]
+    Q_{\mu\nu}=\ab(\frac{1}{16\pi G}+\frac{c_\phi}{4}\phi^2-\frac{c_O}{8}g^{\alpha\beta}\mathbb{R}_{\alpha\beta}\ab(\Gamma))g_{\mu\nu}-c_V\mathrm{tr}\ab[V_\mu V_\nu]
 \end{dmath}
 と与えられる．\zcref{eq:EOM}の一般解は
 \begin{dmath}
@@ -72,10 +82,51 @@ S={}&\int d^4x\,\sqrt{-g}\Bigg[-V_0-\frac{1}{16\pi G}\mathbb{R}(g,\Gamma)-\frac{
 \begin{dmath}
     c_V\mathrm{tr}\ab[V^\mu\ab(0+\mathcal{O}\ab(G)) V^\nu]
 \end{dmath}
-$\mathcal{O}\ab(G)$にはスカラー場やゲージボソンに対する質量項は含まれていないため，完全に作用から質量項が失われ，ゲージ対称性は回復する．このプロセスを経て，最終的に得られる作用は
+$\mathcal{O}\ab(G)$にはスカラー場やゲージボソンに対する質量項は含まれていないため，完全に作用から質量項が失われ，ゲージ対称性は回復する．さらに重力定数を得ることができる．このプロセスを経て，最終的に得られる作用は
 \begin{dmath}
-    S=\int d^4x\sqrt{-g}\ab(\frac{R}{16\pi G}+\frac{c_\phi}{4}\phi^2R-\frac{c_O}{16}R^2)
+    S=\int d^4x\sqrt{-g}\ab(-\frac{R}{16\pi G}-\frac{c_\phi}{4}\phi^2R-\frac{c_O}{16}R^2-V_0+\mathcal{O}(G))
 \end{dmath}
-これがsymmergent重力における作用である．
+となる．これがsymmergent重力における作用である．$c_\phi$は標準模型から値が得られる．$V_0$に関しては，1ループによって以下のような値をとる．
+\begin{equation}
+    V_0=\frac{\mathrm{str}[\mathcal{M}^2]}{64\pi^2}=\frac{1}{64\pi^2}\bigg(\sum_Bm_B^4-\sum_Fm_F^4\bigg)
+\end{equation}
+ボソンとフェルミオンの質量が等しくなる質量縮退極限の場合，
+\begin{equation}
+    V_0=\frac{M^4_0}{64\pi^2}(n_B-n_F)=\frac{1}{2(8\pi G)^2c_O}
+\end{equation}
+となる．より現実的に，質量縮退が起きていない場合を考慮すると，
+\begin{dmath}
+    V_0=\frac{1-\alpha}{(8\pi G)^2c_O}
+\end{dmath}
+$\alpha$は質量縮退からのずれを表す，symmergent重力特有のパラメータである．
 
 \section{$f(R)$重力としてのsymmergent重力}
+$f(R)$重力とは，アインシュタイン・ヒルベルト作用のリッチスカラー$R$を関数$f(R)$として置き，一般相対論自体に修正を与える理論である．
+\begin{dmath}
+    S=\int d^4x \sqrt{-g}f\ab(R)
+\end{dmath}
+symmergetn重力における$f(R)$は以下のように書ける．
+\begin{dmath}
+    f\ab(R)=R-\pi Gc_OR^2
+    \zlabel{eq:f(R)}
+\end{dmath}
+$c_O$はループ量子補正から誘導される定数で，次のように与えられる．
+\begin{dmath}
+    c_O=\frac{n_B-n_F}{64\pi^2}
+\end{dmath}
+$n_B$，$n_F$はボソンとフェルミオンの粒子数を表す．symmergent重力の研究は，この二次曲率項の係数$c_O$を明らかにすることが目的の1つである．また，\zcref{eq:f(R)}はリッチスカラーの二乗則を含むことから，以下のスタロビンスキーモデル
+\begin{dmath}
+    f(R)=R+\alpha R^2
+\end{dmath}
+を再現し得る可能性がある．スタロビンスキー型インフレーションは宇宙マイクロ波背景放射(CMB:Cosmic Microwave Background)の観測と整合性があることから注目されている．\\
+symmergent重力における重力場の方程式は以下のように導ける．
+\begin{dmath}
+    R_{\mu\nu}F\ab(R)-\frac{1}{2}g_{\mu\nu}f\ab(R)+\ab[g_{\mu\nu}\Box-\nabla_\mu\nabla_\nu]F\ab(R)=0
+    \zlabel{eq:重力場}
+\end{dmath}
+$\Box$はダランベール演算子であり，$f(R)$の微分形で
+\begin{equation}
+    F(R)=\frac{d f(R)}{dR}=1-2\pi Gc_OR
+\end{equation}
+と書く．
+

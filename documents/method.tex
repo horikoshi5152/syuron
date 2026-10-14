@@ -2,8 +2,60 @@
 ああああああ
 \section{ブラックホール}
 \cite{Perlick:2021aok,1020588205192529152,Zakharov:2005ek,Tsukamoto:2024gkz,Buoninfante:2024oxl,Ozsoy:2023ryl,Al-Badawi:2026ael,EventHorizonTelescope:2019dse,EventHorizonTelescope:2022wkp}
-\subsection{Schwarzschild}
-\subsection{Kerr}
-\subsection{RN}
+2016年にEvent Hrizon Telescope(EHT)によってブラックホールシャドウが観測された．
+ブラックホールは物理量として，質量，角運動量，電荷のいずれかしか持たないと言われている．
+\section{symmergent重力におけるブラックホール}
+symmergent重力における重力場の方程\zcref{eq:重力場}を静的球対称な時空で考えると，
+\begin{dmath}
+    ds^2=-f(r)dt^2+\frac{d r^2}{f(r)}+r^2(d\theta^2+\mathrm{sin}^2\theta d\phi^2)
+\end{dmath}
+\begin{dmath}
+    f(r)=1-\frac{2GM}{r}-\frac{(1-\alpha)}{24\pi Gc_O}r^2
+    \zlabel{eq:f(r)}
+\end{dmath}
+となる．一般相対論における静的球対称なブラックホールをSchwarzschild解と呼び，\zcref{eq:f(r)}の第ニ項までを指す．
+\begin{dmath}
+    f^{GR}(r)=1-\frac{2GM}{r}
+    \zlabel{eq:frGR}
+\end{dmath}
+今後は，重力理論に関係なく，質量のみのブラックホールのことをSchwarzschildブラックホールと呼ぶことにする．また，\zcref{eq:frGR}に電荷$q$を導入したブラックホールをReissner-Nordstr$\mathrm{\ddot{o}}$m（RN）ブラックホールといい，
+\begin{dmath}
+    f^{GR}(r)=1-\frac{2GM}{r}+\frac{q^2}{r^2}
+\end{dmath}
+と与えられる．symmergent重力におけるRNブラックホールは
+\begin{dmath}
+    f(r)=1-\frac{2GM}{r}-\frac{(1-\alpha)}{24\pi Gc_O}r^2+\frac{q^2}{2\alpha r^2}
+\end{dmath}
+と与えられる．
+\subsection{ブラックホールの有効ポテンシャル}
+ブラックホールの有効ポテンシャルは重力ポテンシャルと角運動量ポテンシャルを合わせたもので，ブラックホールの振る舞いを調べる上で，重要である．ブラックホール解から導くことができ，一般的には次のように表す．
+\begin{equation}
+    V_{eff}=\sqrt{\big( f(r) \big) \bigg( 1+\frac{\mathcal{L}^2}{r^2}\bigg) }
+\end{equation}
+$\mathcal{L}$は角運動量パラメータを表す．symmergent重力におけるSchwarzschild，RNブラックホールの有効ポテンシャルを記述しておく．
+\begin{dmath}
+    V^{Schw}_{eff}=\sqrt{\bigg( 1-\frac{2GM}{r}-\frac{(1-\alpha)}{24\pi Gc_O}r^2 \bigg) \bigg( 1+\frac{\mathcal{L}^2}{r^2}\bigg) }
+\end{dmath}
+\begin{dmath}
+    V^{RN}_{eff}=\sqrt{\bigg( 1-\frac{2GM}{r}-\frac{(1-\alpha)}{24\pi Gc_O}r^2+\frac{q^2}{2\alpha r^2} \bigg) \bigg( 1+\frac{\mathcal{L}^2}{r^2}\bigg) }
+\end{dmath}
+有効ポテンシャルの距離による振る舞いを解析し，一般相対論のブラックホールの有効ポテンシャルと比較する．
+\subsection{ブラックホールシャドウ}
+重力理論の検証にはブラックホールシャドウもよく用いられる．EHTの観測により，シャドウ半径が推定できた．シャドウを用いて，観測と整合性があるようなsymmergentパラメータ，二次曲率項の係数の制限を行う．シャドウ半径は一般的に次のように表す．
+\begin{dmath}
+    R_{sh}=\frac{r_{ph}}{\sqrt{f(r_{ph})}}\sqrt{f(r_0)}
+\end{dmath}
+$r_{ph}$は光子球半径，$r_0$は観測者からの距離を表す．また，光子球半径は以下のように与えられる．
+\begin{dmath}
+    r^{Schw}_{ph}=3M
+\end{dmath}
+Schwarzschildではsymmergent重力と一般相対論は同じである．RNでは次のようになる．
+\begin{dmath}
+    r_{ph}=\frac{3M\alpha+\sqrt{9M^2\alpha^2-4q^2\alpha}}{2\alpha}
+\end{dmath}
+\begin{dmath}
+    r^{GR}_{ph}=\frac{3M+\sqrt{9M^2-8q^2}}{2}
+\end{dmath}
+シャドウ半径の距離による振る舞いを解析し，一般相対論および観測で得られるシャドウ半径と比較する．
 \section{インフレーション}
 \cite{1970586434916889216,Planck:2018jri}
