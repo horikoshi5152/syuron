@@ -2,10 +2,91 @@
 kkk
 \section{ニュートン力学}
 \cite{1971430859808286867}
-ニュートン力学はニュートン(Isaac Newton)が1687年にプリンキピア(Principia)で発表した古典力学の枠組みである．当時，2つの天体を結びつける力の正体を多くの研究者が探っていた．その中でニュートンはすべての物体同士は互いに引っ張り合う力が働くとする万有引力を新たに考えた．さらに，地球上での物体の落下現象と天体間の運動は同一の力が起因していると説明し，万有引力の法則を提唱した．ニュートン力学は運動の3法則と万有引力の法則から成る理論形式で，ニュートン力学において重力とは，万有引力と地球の自転による遠心力の合力である．しかし，古典力学では原子レベルのミクロな世界での物理法則や光速に近い速度の物体の運動を扱うことができなかった．それらを解決するために提唱されたのが量子論と相対論である．その点でニュートン力学は一般性があるとは言えず，重力の捉え方も見直す必要があった．
+ニュートン力学はニュートン（Isaac Newton）が1687年にプリンキピア（Principia）で発表した古典力学の枠組みである．当時，2つの天体を結びつける力の正体を多くの研究者が探っていた．その一人に，ニュートンは，すべての物体同士は互いに引っ張り合う力が働くとする万有引力を新たに考えた．さらに，地球上での物体の落下現象と天体間の運動は同一の力が起因していると説明し，万有引力の法則を提唱した．ニュートン力学は運動の三法則と万有引力の法則から成る理論形式で，ニュートン力学における重力とは，万有引力と地球の自転による遠心力の合力である．しかし，古典力学では原子レベルのミクロな世界での物理法則や光速に近い速度の物体の運動を扱うことができなかった．それらを解決するために提唱されたのが量子論と相対論である．その点においてニュートン力学は一般性があるとは言えず，重力の捉え方も見直す必要があった．
 \section{一般相対性理論}
 \cite{1971149384824946599,1020000782474158465}
-一般相対性理論(GR:General Relativity)は1915年にアインシュタイン(Albert Einstein)が提唱した理論である．これは1905年に提唱した特殊相対性理論がもとになっている．当時，光は未知の媒質(エーテル)を振動しながら伝わると考えられていた．しかし，マイケルソン・モーリーの実験より光の速度は方向による違いは見られず，エーテルの存在は確認できなかった．この実験を皮切りに，アインシュタインは光速度不変の原理と相対性原理を見出し，特殊相対性理論を発表した．
-ニュートン力学では重力は無限の速さで伝わることになるが，特殊相対論では光速を超えて情報を伝えることはできない．
+一般相対性理論（GR：General Relativity）は1915年にアインシュタイン（Albert Einstein）が提唱した理論である．これは1905年に提唱した特殊相対性理論（Special Relativity）がもとになっている．
+\subsection{相対性理論の誕生}
+当時，光は未知の媒質（エーテル）を振動しながら伝わると考えられていた．しかし，マイケルソン・モーリーの実験より光の速度が方向による違いは見られず，エーテルの存在は確認できなかった．この実験を皮切りに，アインシュタインは，光速度はどの慣性系で測定しても同じ値であるという「光速度不変の原理」とすべての慣性系において物理法則は同じであるという「相対性原理」を見出し，特殊相対論を発表した．特殊相対論では3次元空間に1次元の時間を加えたミンコフスキー（H. Minkowski）空間を用いて定式化される．4次元時空の2点間$P(ct,x,y,z), Q(c(t+dt),x+dx,y+dy,z+dz)$の距離を線素$ds^2$といい，次のように与えられる．
+\begin{dmath}
+    ds^2=-c^2dt^2+dx^2+dy^2+dz^2
+    \zlabel{eq:線素}
+\end{dmath}
+この線素は光速度不変の原理を仮定すると，慣性系間の座標変換（ローレンツ変換）の下で不変となる．ローレンツ変換は以下のように表す．($x$軸方向にのみ動くものとする．)
+\begin{dmath}
+    x^\prime=\gamma(x-c\beta t)
+\end{dmath}
+\begin{dmath}
+    t^\prime=\gamma\bigg(t-\frac{\beta}{c}x\bigg)
+\end{dmath}
+ここで，変数は
+\begin{dmath}
+    \beta=\frac{V}{c}
+\end{dmath}
+\begin{equation}
+    \gamma=\frac{1}{\sqrt{1-\frac{V^2}{c^2}}}=\frac{1}{\sqrt{1-\beta^2}}
+\end{equation}
+である．
+\subsection{アインシュタイン方程式}
+ニュートン力学では重力は無限の速さで伝わることになるが，特殊相対論では光速を超えて情報を伝えることはできない．そこで，重力理論の相対論化が模索され，アインシュタインが等価原理を考案した．等価原理とは一様重力場が存在する系と等加速度で運動する系の間のすべての物理現象は等価であることを主張した考えである．それを基に，曲がった空間というアイデアにたどり着いた．曲がった時空はリーマン幾何学で表すことができる．線素の\zcref{eq:線素}は次のように拡張できる．
+\begin{dmath}
+    ds^2=g_{\mu\nu}dx^\mu dx^\nu
+\end{dmath}
+$g_{\mu\nu}$は時空の各点$x^\mu\,(\mu=0,1,2,3)$に依存した計量テンソルである．
+\\曲がった時空におけるベクトルの平行移動を示す．次のベクトルを考える．
+\begin{dmath}
+    \mathbf{A}=A^\mu\mathbf{e}_\mu
+\end{dmath}
+ここで，$A^\mu$はベクトル成分，$\mathbf{e}_\mu$は基底ベクトルを表す．微小に離れた2点$P(x^\mu)$および$Q(x^\mu+dx^\mu)$における2つの基底には
+\begin{dmath}
+    \mathbf{e}_\mu (x+dx)=\mathbf{e}_\mu(x)+\frac{\partial}{\partial x^\alpha}\mathbf{e}_\mu(x)dx^\alpha
+\end{dmath}
+という関係にある．ここで，
+\begin{dmath}
+    \frac{\partial}{\partial x^\alpha}\mathbf{e}_\mu(x)=\mathbf{e}_\rho(x)\Gamma^\rho_{\alpha\beta}(x)
+\end{dmath}
+と表す．$\Gamma^\rho_{\alpha\mu}$はアフィン接続係数という．$A^\mu(x)$を点$Q$まで平行移動したものを次のように与えることができる．
+\begin{dmath}
+    A^\mu_\Vert(x+dx)=A^\mu(x)-\Gamma^\mu_{\alpha\beta}(x)A^\beta(x)dx^\alpha
+\end{dmath}
+点$Q$におけるベクトルの成分$A^\mu(x+dx)$との差は点$Q$のベクトルとなる．
+\begin{dmath}
+    \begin{aligned}
+    A^\mu(x+dx)-A^\mu_\Vert(x+dx)=A^\mu(x+dx)-A^\mu(x)+\Gamma^\mu_{\alpha\beta}(x)A^\beta(x)dx^\alpha
+    \\=\bigg[\frac{\partial A^\mu}{\partial x^\alpha}+\Gamma^\mu_{\alpha\beta}(x)A^\beta(x)\bigg]dx^\alpha
+    \end{aligned}
+\end{dmath}
+ここから，ベクトル$\mathbf{A}$に対する共変微分$\nabla_\alpha$を定義することができる．
+\begin{dmath}
+    \nabla_\alpha A^\mu=\frac{\partial A^\mu}{\partial x^\alpha}+\Gamma^\mu_{\alpha\beta}A^\beta
+\end{dmath}
+ここで，次のように定義される接続係数をクリストッフェル記号という．
+\begin{dmath}
+    \Gamma^\mu_{\alpha\beta}=\frac{1}{2}g^{\mu\nu}\bigg(\frac{\partial g_{\nu\beta}}{\partial x^\alpha}+\frac{\partial g_{\alpha\nu}}{\partial x^\beta}-\frac{\partial g_{\alpha\beta}}{\partial x^\nu}\bigg)
+\end{dmath}
+このクリストッフェル記号によって基底ベクトルの平行移動を定義する場合を，リーマン接続という．
+\\曲がった時空を表す特徴的な幾何学量は曲率である．接続係数を用いて表したものをリーマン曲率といい，以下のように記述する．
+\begin{dmath}
+    R^\mu_{\alpha\beta\gamma}=\frac{\partial\Gamma^\mu_{\alpha\gamma}}{\partial x^\beta}-\frac{\partial\Gamma^\mu_{\alpha\beta}}{\partial x^\gamma}+\Gamma^\mu_{\nu\beta}\Gamma^\nu_{\alpha\gamma}-\Gamma^\mu_{\nu\gamma}\Gamma^\nu_{\alpha\beta}
+\end{dmath}
+ここで，$R_{\mu\nu}=R^\rho_{\mu\rho\nu}$をリッチテンソル，$R=g^{\mu\nu}R_{\mu\nu}$をスカラー曲率とする．これらを用いて一般相対論における重力方程式について考える．
+\\重力ポテンシャルを$\phi$とするとニュートン重力理論は
+\begin{dmath}
+    \Delta\phi=4\pi G\rho
+    \zlabel{eq:重力ポテンシャル}
+\end{dmath}
+というポアソン方程式で記述される．左辺に関して，弱い重力場の場合($\phi/c^2\ll 1$)，重力ポテンシャルと計量の00成分には次のような関係がある．
+\begin{equation}
+    g_{00}=-c^2(\mathbf{r})=-(1+\phi/c^2)^2\approx-(1+2\phi/c^2)
+\end{equation}
+一方，右辺に関して，エネルギーと質量の等価性から$\rho c^2$はエネルギー密度と考えられ，エネルギー・運動量テンソルの00成分である．つまり，\zcref{eq:重力ポテンシャル}は
+\begin{dmath}
+    -\Delta g_{00}=\frac{8\pi G}{c^4}T_{00}
+\end{dmath}
+と書き換えられる．計量の2階微分を含み，テンソルである量は曲率である．以上より，重力に関する方程式は空間と物質密度を結びつける式となり，
+\begin{dmath}
+    R_{\mu\nu}-\frac{1}{2}g_{\mu\nu}R=\frac{8\pi G}{c^4}T_{\mu\nu}
+\end{dmath}
+と与えられる．これがアインシュタイン方程式である．
 \section{場の量子論}
 \cite{1971712334789710479,1971993809681112242}

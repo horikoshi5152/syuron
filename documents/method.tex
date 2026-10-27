@@ -1,32 +1,53 @@
-\chapter{観測データとの比較}
-ああああああ
+\chapter{symmergent重力の検証}
+本章では，symmergent重力の整合性を検証するため，symmergent重力におけるブラックホールを解析する．はじめに，ブラックホールについて基本的な概要を述べる．次に，symmergent重力におけるブラックホール解を示す．最後に，示されたブラックホール解から今回解析する有効ポテンシャルとブラックホールシャドウを示す．
 \section{ブラックホール}
 \cite{Perlick:2021aok,1020588205192529152,Zakharov:2005ek,Tsukamoto:2024gkz,Buoninfante:2024oxl,Ozsoy:2023ryl,Al-Badawi:2026ael,EventHorizonTelescope:2019dse,EventHorizonTelescope:2022wkp}
-2016年にEvent Hrizon Telescope(EHT)によってブラックホールシャドウが観測された．
+2016年にEvent Hrizon Telescope（EHT）によってブラックホールシャドウが観測された．
 ブラックホールは物理量として，質量，角運動量，電荷のいずれかしか持たないと言われている．
 \section{symmergent重力におけるブラックホール}
-symmergent重力における重力場の方程\zcref{eq:重力場}を静的球対称な時空で考えると，
+一般相対論における静的球対称な時空のブラックホールをSchwarzschild解と呼び，以下のように書ける．
 \begin{dmath}
     ds^2=-f(r)dt^2+\frac{d r^2}{f(r)}+r^2(d\theta^2+\mathrm{sin}^2\theta d\phi^2)
 \end{dmath}
 \begin{dmath}
-    f(r)=1-\frac{2GM}{r}-\frac{(1-\alpha)}{24\pi Gc_O}r^2
-    \zlabel{eq:f(r)}
-\end{dmath}
-となる．一般相対論における静的球対称なブラックホールをSchwarzschild解と呼び，\zcref{eq:f(r)}の第ニ項までを指す．
-\begin{dmath}
     f^{GR}(r)=1-\frac{2GM}{r}
     \zlabel{eq:frGR}
 \end{dmath}
-今後は，重力理論に関係なく，質量のみのブラックホールのことをSchwarzschildブラックホールと呼ぶことにする．また，\zcref{eq:frGR}に電荷$q$を導入したブラックホールをReissner-Nordstr$\mathrm{\ddot{o}}$m（RN）ブラックホールといい，
+一般相対論とsymmergent重力を区別するため，一般相対論を表している場合にはGRを付けている．symmergent重力における重力場の方程\zcref{eq:重力場}を静的球対称な時空で考えると，関数$f(r)$にsymmergent補正項が現れる．
+\begin{dmath}
+    f(r)=1-\frac{2GM}{r}-\frac{1-\alpha}{24\pi Gc_O}r^2
+    \zlabel{eq:f(r)}
+\end{dmath}
+この解は，$\alpha\to 1$または$c_O\to\infty$のとき一般相対論のSchwarzschild解を導く．そして，$0<\alpha<1$のときAnti-de Sitter（AdS）宇宙を表し，$1<\alpha$のときde Sitter（dS）宇宙を表す．AdSとは宇宙項が負の値をとるアインシュタイン方程式の解であり，dSとは宇宙項が正の値をとるアインシュタイン方程式の解である．
+\\今後は，重力理論に関係なく，質量のみのブラックホールのことをSchwarzschildブラックホールと呼ぶことにする．以下，他の物理量のブラックホールも同様に呼ぶことにする，
+\\また，\zcref{eq:frGR}に電荷$q$を導入したブラックホールをReissner-Nordstr$\mathrm{\ddot{o}}$m（RN）ブラックホールといい，
 \begin{dmath}
     f^{GR}(r)=1-\frac{2GM}{r}+\frac{q^2}{r^2}
 \end{dmath}
 と与えられる．symmergent重力におけるRNブラックホールは
 \begin{dmath}
-    f(r)=1-\frac{2GM}{r}-\frac{(1-\alpha)}{24\pi Gc_O}r^2+\frac{q^2}{2\alpha r^2}
+    f(r)=1-\frac{2GM}{r}-\frac{1-\alpha}{24\pi Gc_O}r^2+\frac{q^2}{2\alpha r^2}
 \end{dmath}
 と与えられる．
+\\角運動量を持つ場合をKerrブラックホールといい，Boyer-Lindquist座標を用いて表すと，
+\begin{equation}
+    ds^2=\frac{\rho^2}{\Delta_r}dr^2+\frac{\rho^2}{\Delta_\theta}d\theta^2+\frac{\Delta_\theta \mathrm{sin}^2\theta}{\rho^2}\bigg[adt-(r^2+a^2)\frac{d\phi}{\Xi}\bigg]^2-\frac{\Delta_r}{\rho^2}\bigg(dt-a\,\mathrm{sin}^2\theta\frac{d\phi}{\Xi}\bigg)^2
+\end{equation}
+となる．関数はそれぞれ以下のように与えられる．
+\begin{dmath}
+    \Delta_r=(r^2+a^2)\bigg(1-\frac{1-\alpha}{24\pi Gc_O}r^2\bigg)-2GMr
+\end{dmath}
+\begin{dmath}
+    \rho^2=r^2+a^2\mathrm{cos}^2\theta
+\end{dmath}
+\begin{dmath}
+    \Delta_\theta=1+\frac{1-\alpha}{24\pi Gc_O}r^2a^2\mathrm{cos}^2\theta
+\end{dmath}
+\begin{dmath}
+    \Xi=1+\frac{1-\alpha}{24\pi Gc_O}r^2a^2
+\end{dmath}
+$a$はブラックホールのスピンパラメータである．
+
 \subsection{ブラックホールの有効ポテンシャル}
 ブラックホールの有効ポテンシャルは重力ポテンシャルと角運動量ポテンシャルを合わせたもので，ブラックホールの振る舞いを調べる上で，重要である．ブラックホール解から導くことができ，一般的には次のように表す．
 \begin{equation}
@@ -34,10 +55,10 @@ symmergent重力における重力場の方程\zcref{eq:重力場}を静的球�
 \end{equation}
 $\mathcal{L}$は角運動量パラメータを表す．symmergent重力におけるSchwarzschild，RNブラックホールの有効ポテンシャルを記述しておく．
 \begin{dmath}
-    V^{Schw}_{eff}=\sqrt{\bigg( 1-\frac{2GM}{r}-\frac{(1-\alpha)}{24\pi Gc_O}r^2 \bigg) \bigg( 1+\frac{\mathcal{L}^2}{r^2}\bigg) }
+    V^{Schw}_{eff}=\sqrt{\bigg( 1-\frac{2GM}{r}-\frac{1-\alpha}{24\pi Gc_O}r^2 \bigg) \bigg( 1+\frac{\mathcal{L}^2}{r^2}\bigg) }
 \end{dmath}
 \begin{dmath}
-    V^{RN}_{eff}=\sqrt{\bigg( 1-\frac{2GM}{r}-\frac{(1-\alpha)}{24\pi Gc_O}r^2+\frac{q^2}{2\alpha r^2} \bigg) \bigg( 1+\frac{\mathcal{L}^2}{r^2}\bigg) }
+    V^{RN}_{eff}=\sqrt{\bigg( 1-\frac{2GM}{r}-\frac{1-\alpha}{24\pi Gc_O}r^2+\frac{q^2}{2\alpha r^2} \bigg) \bigg( 1+\frac{\mathcal{L}^2}{r^2}\bigg) }
 \end{dmath}
 有効ポテンシャルの距離による振る舞いを解析し，一般相対論のブラックホールの有効ポテンシャルと比較する．
 \subsection{ブラックホールシャドウ}
